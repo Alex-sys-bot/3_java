@@ -7,6 +7,9 @@ public class Program {
         System.out.println(strSort(arr));
         String str = "radar";
         System.out.println(isPalindrome(str));
+
+        String s = "hello";
+        System.out.println(reverseString(s));
     }
 
     public static String strSort(String[] arr) {
@@ -26,11 +29,19 @@ public class Program {
     }
 
     public static String reverseString(String s) {
-        String r = "";
-        for (int i = s.length() - 1; i >= 0; --i){
-            r += s.charAt(i);
+        //Здесь нужно применить StringBuilder
+        StringBuilder sb = new StringBuilder();
+        for (int i = s.length()-1; i >= 0; i--) {
+            sb.append(s.charAt(i));
         }
-        return r;
+        return sb.toString();
+
+
+//        String r = "";
+//        for (int i = s.length() - 1; i >= 0; --i){
+//            r += s.charAt(i);
+//        }
+//        return r;
     }
 
     public static Boolean isPalindrome(String s) {
